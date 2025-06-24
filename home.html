@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadi Gala 2025 - Summer Breeze Bash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f7f3e3 0%, #e8f5e8 25%, #d4eaa7 50%, #bce29e 75%, #a8e6cf 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="3" fill="rgba(255,255,255,0.2)" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/></circle><circle cx="75" cy="50" r="2" fill="rgba(255,255,255,0.3)" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/></circle><circle cx="50" cy="75" r="2.5" fill="rgba(255,255,255,0.25)" opacity="0.5"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="5s" repeatCount="indefinite"/></circle></svg>') repeat;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .celebration-graphic {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(241, 196, 15, 0.15) 0%, rgba(46, 204, 113, 0.1) 50%, transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+            border: 2px solid rgba(241, 196, 15, 0.3);
+        }
+
+        .celebration-graphic::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60%;
+            height: 60%;
+            border: 3px solid rgba(46, 204, 113, 0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .celebration-graphic::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30%;
+            height: 30%;
+            border: 2px solid rgba(241, 196, 15, 0.6);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.7;
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .dancing-figures {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 10px;
+            font-size: 2rem;
+        }
+
+        .figure {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(45deg, #f1c40f, #2ecc71);
+            border-radius: 50%;
+            animation: dance 2s ease-in-out infinite alternate;
+            box-shadow: 0 0 15px rgba(241, 196, 15, 0.5);
+        }
+
+        .figure:nth-child(even) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0) rotate(-5deg); }
+            100% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .music-waves {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .wave {
+            width: 4px;
+            height: 20px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 2px;
+            animation: wave 1s ease-in-out infinite;
+        }
+
+        .wave:nth-child(2) { animation-delay: 0.2s; }
+        .wave:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes wave {
+            0%, 100% { height: 20px; }
+            50% { height: 40px; }
+        }
+
+        .sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .sparkle {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(45deg, #f1c40f, white);
+            border-radius: 2px;
+            position: absolute;
+            animation: sparkleMove 8s linear infinite;
+            box-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
+        }
+
+        .sparkle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 60%; right: 20%; animation-delay: 2s; }
+        .sparkle:nth-child(3) { bottom: 30%; left: 30%; animation-delay: 4s; }
+        .sparkle:nth-child(4) { top: 40%; right: 30%; animation-delay: 6s; }
+
+        @keyframes sparkleMove {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+        }
+
+        .hero-text {
+            color: #2d3436;
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            animation: slideInLeft 1s ease-out;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: slideInLeft 1s ease-out 0.2s both;
+            font-weight: bold;
+        }
+
+        .persian-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #2ecc71;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: slideInLeft 1s ease-out 0.4s both;
+            font-weight: bold;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            animation: slideInLeft 1s ease-out 0.6s both;
+            color: #2d3436;
+        }
+
+        .purchase-btn {
+            background: linear-gradient(45deg, #2ecc71, #f1c40f);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+            animation: slideInLeft 1s ease-out 0.8s both;
+        }
+
+        .purchase-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(46, 204, 113, 0.4);
+            text-decoration: none;
+            color: white;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .event-details {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .details-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .details-section:hover {
+            border-color: #f1c40f;
+            transform: translateY(-5px);
+        }
+
+        .details-section h3 {
+            color: #2ecc71;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .details-list li strong {
+            color: #333;
+            min-width: 80px;
+        }
+
+        .early-bird-alert {
+            background: linear-gradient(135deg, #2ecc71, #f1c40f);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(46, 204, 113, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .early-bird-alert::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        .early-bird-alert h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .early-bird-alert p {
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0.95;
+        }
+
+        .ticket-purchase {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 0;
+            border-radius: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .ticket-purchase h2 {
+            color: #2ecc71;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .current-price {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid #f1c40f;
+            margin-bottom: 2rem;
+        }
+
+        .price-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2ecc71;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-note {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .stripe-button {
+            background: linear-gradient(45deg, #2ecc71, #f1c40f);
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.4);
+        }
+
+        .stripe-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(46, 204, 113, 0.5);
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .persian-title {
+                font-size: 1.8rem;
+            }
+            
+            .celebration-graphic {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .event-details, .ticket-purchase {
+                margin: 20px 0;
+                border-radius: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .celebration-graphic {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .details-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="celebration-graphic">
+                        <div class="dancing-figures">
+                            <div class="figure"></div>
+                            <div class="figure"></div>
+                            <div class="figure"></div>
+                            <div class="figure"></div>
+                            <div class="figure"></div>
+                        </div>
+                        <div class="music-waves">
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                        </div>
+                        <div class="sparkles">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Shadi Gala 2025</h1>
+                    <h2 class="hero-subtitle">Summer Breeze Bash</h2>
+                    <h3 class="persian-title">جشن نسیم تابستانی</h3>
+                    <p class="hero-description">Join us for a vibrant evening of Persian celebration, live music, delicious cuisine, and unforgettable summer vibes. This adult-only night blends tradition with modern festivity.</p>
+                    <a href="#tickets" class="purchase-btn">Purchase Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section class="event-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-section">
+                    <h3>Event Details</h3>
+                    <ul class="details-list">
+                        <li><strong>Date:</strong> Saturday, August 2, 2025</li>
+                        <li><strong>Time:</strong> 6:30 PM – 11:30 PM</li>
+                        <li><strong>Location:</strong> 2650 Aborn Rd, San Jose, CA 95121</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>What's Included</h3>
+                    <ul class="details-list">
+                        <li>A full dinner experience</li>
+                        <li>Hand-crafted appetizers & irresistible desserts</li>
+                        <li>Tea & Persian sweets</li>
+                        <li>First two drinks included</li>
+                        <li>A live DJ & dance floor</li>
+                        <li>Additional drinks available (cash only)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Bird Alert -->
+    <section class="early-bird-alert">
+        <div class="container">
+            <h3>Early Bird Sale!</h3>
+            <p>Tickets will be $110 in the month of June but have a $10 price increase every subsequent month. Secure your spot early and save!</p>
+        </div>
+    </section>
+
+    <!-- Ticket Purchase -->
+    <section class="ticket-purchase" id="tickets">
+        <div class="container">
+            <h2>Get Your Tickets Now</h2>
+            
+            <div class="current-price">
+                <div class="price-display" id="currentPrice">$110</div>
+                <div class="price-note" id="priceNote">June 2025 Price</div>
+            </div>
+            
+            <a href="your-stripe-link-here" class="stripe-button">
+                Purchase Tickets Securely
+            </a>
+            
+            <p style="margin-top: 1rem; color: #666; font-size: 1rem;">
+                Secure payment powered by Stripe • Instant confirmation • All major cards accepted
+            </p>
+            
+            <div style="margin-top: 2rem; color: #2ecc71; font-size: 1.1rem; font-weight: bold;">
+                Let loose, dress up, and get ready for an unforgettable summer night.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.purchase-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('tickets').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
